@@ -1,0 +1,22 @@
+name: Deploy PR
+
+on:
+  push:
+    branches: master
+
+jobs:
+  deploy:
+    uses: DavidBarrera022/reto_meli_pipelines/.github/workflows/deploy_python_cmp.yml@master
+    with:
+      environment: "pr"
+      project_id: "scenic-era-450314-f4"
+      dag_path_origin: "./app/net/prueba"
+      dag_name: "dag_reto_meli.py.py"
+      dag_name_py: "dag_reto_meli.py.py"
+      folder_dag: "dags"
+      bucket_dag: "us-central1-proyecto-compos-9cca689f-bucket"
+    secrets:
+      DIG_READER_GITHUB_USER: ${{ secrets.DIG_READER_GITHUB_USER }}
+      DIG_READER_GITHUB_ACCESS_TOKEN: ${{ secrets.DIG_READER_GITHUB_ACCESS_TOKEN }}
+      GCP_IDENTITY_PROVIDER : ${{secrets.GCP_IDENTITY_PROVIDER}}
+      GCP_SERVICE_ACCOUNT : ${{secrets.GCP_SERVICE_ACCOUNT}}
