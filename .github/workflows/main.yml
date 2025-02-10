@@ -3,15 +3,15 @@ name: Deploy PR
 on:
   push:
     branches:
-      - master
+      - main
   pull_request:
     branches:
-      - master
+      - main
   workflow_dispatch:
-    
+
 jobs:
   deploy:
-    uses: DavidBarrera022/reto_meli_pipelines/.github/workflows/deploy_python_cmp.yml@master
+    uses: DavidBarrera022/reto_meli_pipelines/.github/workflows/deploy_python_cmp.yml@main
     with:
       environment: "pr"
       project_id: "scenic-era-450314-f4"
