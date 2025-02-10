@@ -2,8 +2,13 @@ name: Deploy PR
 
 on:
   push:
-    branches: master
-
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+  workflow_dispatch:
+    
 jobs:
   deploy:
     uses: DavidBarrera022/reto_meli_pipelines/.github/workflows/deploy_python_cmp.yml@master
