@@ -16,8 +16,8 @@ jobs:
       environment: "pr"
       project_id: "scenic-era-450314-f4"
       dag_path_origin: "./app/net/prueba"
-      dag_name: "dag_reto_meli.py.py"
-      dag_name_py: "dag_reto_meli.py.py"
+      dag_name: "dag_reto_meli_daily.py"
+      dag_name_py: "dag_reto_meli_daily.py"
       folder_dag: "dags"
       bucket_dag: "us-central1-proyecto-compos-9cca689f-bucket"
     secrets:
